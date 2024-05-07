@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>voitures</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+
+ajout voiture:
+<form method=post action=/modifvoitures>
+
+    <section>
+<input id=r._id type="text" placeholder=r.nom></input>
+marque:
+<select name="marque">
+
+    <option id=r.id_marque><% =r.nom %></option>
+    
+</select><br>
+
+énergie:
+<select name="energie">
+
+<option id=r.id_energie><%=r.carburant %>
+</option>
+
+</select><br>
+
+boite de vitesse:
+
+<select name="boite">
+
+<option id=r.id_boite><% =r.type %>
+</option>
+
+             <input id= "champ_nom" type="text" class="voiture" name="<%= r.nom %>" placeholder="<%= r.nom %>">
+                
+            <% }); %>
+        </div>
+    </section>
+
+    <script>
+        let voiture = document.getElementsByClassName("voiture");
+        for(let v of voiture){
+            v.addEventListener("click", (event) =>{
+                axios.get("/voiture/"v.getAttribute('nom')).then(response => {
+                    document.getElementById(response.data._id).innerHTML = '<p> nom : '+ response.data.nom + ' kg <br> marque : '+ response.data.id_marque +'</p>'
+                    })       
+            })
+        }
+    </script>
+
+</body>
+</html>
