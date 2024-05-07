@@ -8,15 +8,17 @@
 </head>
 <body>
 
+<section>
+
 ajout voiture:
 <form method=post action=/modifvoitures>
 
-    <section>
+   
 <input id=r._id type="text" placeholder=r.nom></input>
 marque:
 <select name="marque">
 
-    <option id=r.id_marque><% =r.nom %></option>
+<option id=r.id_marque> <%=r.nom %></option>
     
 </select><br>
 
@@ -32,14 +34,14 @@ boite de vitesse:
 
 <select name="boite">
 
-<option id=r.id_boite><% =r.type %>
+<option id=r.id_boite><%=r.type %>
 </option>
-
-             <input id= "champ_nom" type="text" class="voiture" name="<%= r.nom %>" placeholder="<%= r.nom %>">
+</select>
+<input type="text" class="voiture" name="nom" placeholder="<%= r.nom %>">
                 
             <% }); %>
-        </div>
-    </section>
+        
+ </section>
 
     <script>
         let voiture = document.getElementsByClassName("voiture");
