@@ -15,7 +15,7 @@ app.get("/", function(req, res) {
 
           await client.connect();
           let cols = await  client.db("garage").collection('voitures').find().toArray()
-          res.render('index', {resultat: cols})
+          res.render('indexG', {resultat: cols})
         } finally {
 
           await client.close();
