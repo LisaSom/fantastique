@@ -55,7 +55,7 @@ id_marque:id_m
 
 //-----modif voitures---------------------
 
-app.get('/modifvoitures/:id', function (req, res) {
+app.get('/modifvoiture/:id', function (req, res) {
     let id = (req.params.id)
     let nom = req.body.nom
     let id_e =req.body.id_e
