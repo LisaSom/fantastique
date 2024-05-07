@@ -1,0 +1,37 @@
+importer bd pizza
+se connecter a la bd mongodb sur port 27....
+creer fonction async avec try(tu essaye de faire ca) catch (si souci tu affiche l'objet et toute son arborescence pour trouver l'erreur)
+et qu   and tu as fini tu close la connect
+
+declare bd (si il connait pas il la cree :[
+
+    const dbase = client.db("garage")
+
+])
+a partir d'une route et grace a express on va faire insertMany(
+{name:"couscous", description:"chou croute"}{name:"couscous2", description:"chou croute2"})
+
+pas oublier de mettre 
+
+const express = require("express");
+const client= new MongoClient("mongodb://localhost:27017");
+const jsonfile = require ('jsonfile');
+const app=express();
+const file ='pizza.json'
+app.get('/importPizza', (req,res)=>{
+
+    async function run(){
+        try{
+            await client.connect();
+            const dbase=client.db("restaurant");
+// completer afin de creer la carte des pizzas a partir de pizzas.json avec insertMany
+       jsonfile.readFile(file)
+       .then(obj => res.json(obj))
+       .catch(error => console.error (error)
+       )
+} finally {
+            await client.close();
+        }
+
+    }
+})

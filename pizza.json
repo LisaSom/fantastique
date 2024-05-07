@@ -1,0 +1,90 @@
+
+[{
+    "_id": 0,
+    "name": "Pepperoni",
+    "size": "small",
+    "price": 19,
+    "quantity": 10,
+    "date": {
+      "$date": {
+        "$numberLong": "1615623270000"
+      }
+    }
+  },{
+    "_id": 1,
+    "name": "Pepperoni",
+    "size": "medium",
+    "price": 20,
+    "quantity": 20,
+    "date": {
+      "$date": {
+        "$numberLong": "1615626804000"
+      }
+    }
+  },{
+    "_id": 2,
+    "name": "Pepperoni",
+    "size": "large",
+    "price": 21,
+    "quantity": 30,
+    "date": {
+      "$date": {
+        "$numberLong": "1615972932000"
+      }
+    }
+  },{
+    "_id": 3,
+    "name": "Cheese",
+    "size": "small",
+    "price": 12,
+    "quantity": 15,
+    "date": {
+      "$date": {
+        "$numberLong": "1615634499736"
+      }
+    }
+  },{
+    "_id": 4,
+    "name": "Cheese",
+    "size": "medium",
+    "price": 13,
+    "quantity": 50,
+    "date": {
+      "$date": {
+        "$numberLong": "1642022593331"
+      }
+    }
+  },{
+    "_id": 5,
+    "name": "Cheese",
+    "size": "large",
+    "price": 14,
+    "quantity": 10,
+    "date": {
+      "$date": {
+        "$numberLong": "1641964093000"
+      }
+    }
+  },{
+    "_id": 6,
+    "name": "Vegan",
+    "size": "small",
+    "price": 17,
+    "quantity": 10,
+    "date": {
+      "$date": {
+        "$numberLong": "1610514493000"
+      }
+    }
+  },{
+    "_id": 7,
+    "name": "Vegan",
+    "size": "medium",
+    "price": 18,
+    "quantity": 10,
+    "date": {
+      "$date": {
+        "$numberLong": "1610514613000"
+      }
+    }
+  }]

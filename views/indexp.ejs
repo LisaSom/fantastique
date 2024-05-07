@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Licornes</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <section>
+        
+        <!-- <h2>pizzas : </h2>
+        <div class="ajout">
+            <% resultat.forEach( (r)=> { %>
+                <input type="submit" class="pizza" name="<%= r.name %>" value="<%= r.name %>">
+                <div id="<%= r._id %>"></div>
+            <% }); %>
+        </div> -->
+
+        <button id="boutonne">bouton</button>
+    </section>
+
+    <script>
+    monBouton= document.getElementById()
+    monBouton.addEventListener("click", (event) =>{
+        axios.get('/importpizza').then(response => {
+            dbase.collection(myCollection).insertMany(response.data)
+        })
+    })
+        // let pizza = document.getElementsByClassName("pizza");
+        // for(let p of pizza){
+        //     p.addEventListener("click", (event) =>{
+        //         axios.get("/pizza/"+p.getAttribute('name')).then(response => {
+        //             document.getElementById(response.data._id).innerHTML = '<p> taille : '+ response.data.size + ' <br> prix : '+ response.data.price +'</p>'
+        //             })       
+        //     })
+        // }
+    </script>
+    
+</body>
+</html>
