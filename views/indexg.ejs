@@ -3,68 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>voitures</title>
+    <title>Licornes</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
-
-<section>
-
-ajout voiture:
-<form method=post action=/modifvoitures>
-
-   
-<input id=r._id type="text" placeholder=r.nom></input>
-marque:
-<select name="marque">
-<% resultatmarque.forEach( (r)=> { %>
- <option id=r.id_marque> <%=r.nom %>            </option>
-     <% }); %>
-</select><br>
-
-énergie:
-<select name="energie">
-
-<% resultatenergie.forEach( (r)=> { %>
-<option id=r.id_energie><%=r.carburant %>
-</option>
- <% }); %>
-
-</select><br>
-
-boite de vitesse:
-
-<select name="boite">
-
-<% resultatboite.forEach( (r)=> { %>
-<option id=r.id_boite><%=r.type %>
-</option>
- <% }); %>
-
-</select>
-
-<input type="text" class="voiture" name="nom" placeholder="<%= r.nom %>">
-                   
-<input type="submit" value="enregistrer"
-</input>       
- </section>
+    <section>
+        
+        <h2>voitures : </h2>
+        <div class="ajout">
+            <% resultat.forEach( (r)=> { %>
+                <input type="submit" class="voitures" name="<%= r.nom %>" value="<%= r.nom %>">
+                <div id="<%= r._id %>"></div>
+            <% }); %>
+        </div>
+    </section>
 
     <script>
-      
-     axios.get("/marquesvoiture).then(response => { 
-     résultatmarque= response.data 
+        let licorne = document.getElementsByClassName("voitures");
+        for(let v of voitures){
+            l.addEventListener("click", (event) =>{
+                axios.get("/voitures/"+v.getAttribute('nom')).then(response => {
+                    document.getElementById(response.data._id).innerHTML = '<p> nom : '+ response.data.nom +'</p>'
                     })       
-       
-axios.get("/energievoiture).then(response => { 
-     résultatenergie= response.data 
-                    })       
-       
-axios.get("/boitesvoiture).then(response => { 
-     résultatboite= response.data 
-                    })       
-       
-        
+            })
+        }
     </script>
-
+    
 </body>
 </html>
